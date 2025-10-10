@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — Laura Lamanepa</title>
+
+    <!-- Fonts & Icons -->
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Replace yourkitid.js with your Font Awesome kit or use CDN icons -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="nav">
+      <div class="container nav-inner">
+        <div class="brand">
+          <a href="#home" class="brand-link">LAURA LAMANEPA</a>
+          <button
+            id="nav-toggle"
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <nav id="nav-menu" class="nav-menu" aria-label="Main navigation">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HOME / HERO -->
+    <main>
+      <section class="hero-section" id="home">
+        <!-- Dekorasi Sparkle -->
+        <div class="sparkle"></div>
+        <div class="sparkle sparkle2"></div>
+        <div class="sparkle sparkle3"></div>
+
+        <!-- Dekorasi Shape Melayang -->
+        <div class="float-shape shape1"></div>
+        <div class="float-shape shape2"></div>
+        <div class="float-shape shape3"></div>
+
+        <div class="hero-container">
+          <div class="hero-photo">
+            <img src="assets/FotoProfil.jpg" alt="Foto Profil" />
+          </div>
+          <div class="hero-text">
+            <h1>Laura Lamanepa ✨</h1>
+            <h3>Information System — UNDIKSA</h3>
+            <p>"Belajar, Berkarya, dan Menginspirasi dengan Teknologi."</p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-dark">Lihat Proyek</a>
+              <a href="#contact" class="btn btn-outline">Hubungi</a>
+              <a href="cv.pdf" class="btn btn-dark" download>Unduh CV</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- ABOUT -->
+      <section class="about-section">
+        <div class="about-container">
+          <h2 class="about-title">About Me</h2>
+          <p class="about-desc">
+            Halo! Saya adalah seorang desainer dan pengembang front-end yang
+            menyukai seni visual, animasi, dan tampilan yang elegan. Saya senang
+            membuat desain yang interaktif dan menarik.
+          </p>
+        </div>
+      </section>
+      <section id="about" class="section fade-up">
+        <div class="container about-grid">
+          <img src="assets/AboutFoto.jpg" alt="About Laura" class="about-img" />
+          <div>
+            <h2>About Me</h2>
+            <p class="lead">
+              Saya mahasiswa Sistem Informasi di UNDIKSA yang bersemangat dalam
+              dunia desain web, pengembangan aplikasi, dan teknologi kecerdasan
+              buatan.
+            </p>
+            <p>
+              <strong>Hobi:</strong> Desain, Coding, Membaca, Musik, Travelling,
+              dan Anjing 🐶
+            </p>
+            <p class="muted small">
+              Aktif berkolaborasi dan selalu berusaha menghadirkan hasil yang
+              kreatif, rapi, dan profesional.
+            </p>
+          </div>
+          <div class="about-card">
+            <img src="abstract-line.svg" alt="" class="accent-line" />
+            <div class="content">
+              <!-- Foto dan teks About Me -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- EDUCATION -->
+    <section id="education" class="education-section">
+      <h2>Education</h2>
+      <div class="education-list">
+        <div class="edu-card">
+          <h3><strong>Ganesha University of Education</strong></h3>
+          <p>Information System (2021 — Present)</p>
+        </div>
+        <div class="edu-card">
+          <h3><strong>East Adonara State Senior High School 1</strong></h3>
+          <p>Science (2018 — 2021)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="certificates-section">
+      <h2>Certificates</h2>
+      <div class="certificates-list">
+        <div class="certificate-card">
+          <img src="assets/Sertifikat1.jpg" alt="Sertifikat Java" />
+          <h3>Pemrograman dengan Java</h3>
+          <p>dicoding Academy — 2025</p>
+        </div>
+        <div class="certificate-card">
+          <img src="assets/Sertifikat2.jpg" alt="Sertifikat Manajemen Proyek" />
+          <h3>Dasar Manajemen Proyek</h3>
+          <p>dicoding Academy — 2025</p>
+        </div>
+        <div class="certificate-card">
+          <img src="assets/Sertifikat3.jpg" alt="Sertifikat C" />
+          <h3>Pemrograman dengan C</h3>
+          <p>dicoding Academy — 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="skill">
+        <span>HTML</span>
+        <div class="progress">
+          <div class="progress-bar" data-skill="90"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>CSS</span>
+        <div class="progress">
+          <div class="progress-bar" data-skill="85"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress">
+          <div class="progress-bar" data-skill="75"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>Python</span>
+        <div class="progress">
+          <div class="progress-bar" data-skill="70"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>SQL</span>
+        <div class="progress">
+          <div class="progress-bar" data-skill="65"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>Canva</span>
+        <div class="progress">
+          <div class="progress-bar" data-skill="80"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <h2>Contact Me</h2>
+      <p>
+        Tertarik berkolaborasi atau sekadar ingin menyapa? Silakan hubungi saya
+        melalui form di bawah atau melalui media sosial saya.
+      </p>
+
+      <div class="contact-container">
+        <!-- Kiri: ikon media sosial -->
+        <div class="contact-info">
+          <h3>Terhubung dengan Saya</h3>
+          <hr />
+          <div class="social-icons">
+            <a href="lauralamanepa25@gmail.com" title="Kirim Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://github.com/" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lauralamanepa/"
+              title="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://instagram/rlaurra/" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kanan: form kontak -->
+        <form class="contact-form">
+          <input type="text" placeholder="Nama Anda" required />
+          <input type="email" placeholder="Email Anda" required />
+          <textarea placeholder="Pesan..." required></textarea>
+          <button type="submit">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2025 [Nama Lengkap]. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
