@@ -1547,321 +1547,396 @@ h2 {
   font-size: 1rem;
 }
 
-/* === ABOUT SECTION DECORATIVE ENHANCEMENT === */
-
-/* Wrapper Section */
-.section.about {
+/* ======= WHERE I HAVE BEEN SECTION ======= */
+.where-section {
   position: relative;
-  padding: 100px 0;
-  background: linear-gradient(180deg, #fdf8f2, #fbf5ee);
-  overflow: hidden;
-}
-
-/* Decorative abstract shapes */
-.section.about::before,
-.section.about::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.3;
-  z-index: 0;
-}
-
-/* Left-behind soft shape */
-.section.about::before {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(
-    circle,
-    rgba(191, 164, 138, 0.3),
-    transparent 70%
-  );
-  top: 20%;
-  left: -80px;
-}
-
-/* Right decorative curve */
-.section.about::after {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(122, 93, 73, 0.15), transparent 70%);
-  bottom: -100px;
-  right: -120px;
-}
-
-/* About Grid container */
-.about-grid {
-  position: relative;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  border-radius: 24px;
-  padding: 50px;
-  box-shadow: 0 12px 40px rgba(75, 63, 54, 0.12);
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 50px;
-  align-items: center;
-  transition: transform 0.3s ease;
-}
-
-/* Hover soft floating effect */
-.about-grid:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 50px rgba(75, 63, 54, 0.15);
-}
-
-/* Elegant abstract lines behind image */
-.about-grid::before {
-  content: "";
-  position: absolute;
-  left: 100px;
-  top: 50%;
-  width: 80%;
-  height: 60%;
-  background: url("https://www.svgrepo.com/show/532689/abstract-shape.svg")
-    no-repeat center/contain;
-  opacity: 0.06;
-  transform: translateY(-50%) rotate(-10deg);
-  pointer-events: none;
-}
-
-/* Image styling */
-.about-img {
   width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(75, 63, 54, 0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.about-img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 16px 45px rgba(75, 63, 54, 0.2);
-}
-
-/* Text styling */
-.about-grid h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.9rem;
-  color: var(--brown-dark);
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.about-grid h2::after {
-  content: "";
-  width: 60px;
-  height: 3px;
-  border-radius: 3px;
-  background: var(--soft-brown);
-  display: block;
-  margin-top: 8px;
-  opacity: 0.6;
-}
-
-/* Paragraphs */
-.about-grid p {
-  line-height: 1.7;
-  font-size: 1rem;
-  color: var(--brown-dark);
-}
-
-.about-grid .muted.small {
-  color: var(--muted);
-  font-style: italic;
-  margin-top: 10px;
-}
-
-/* Floating light accent line */
-.about-line {
-  position: absolute;
-  width: 100px;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--soft-brown),
-    transparent
-  );
-  top: 20%;
-  left: 40%;
-  opacity: 0.5;
-  animation: moveLine 4s ease-in-out infinite;
-}
-
-@keyframes moveLine {
-  0%,
-  100% {
-    transform: translateX(-10px);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translateX(10px);
-    opacity: 0.7;
-  }
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .about-grid::before {
-    display: none;
-  }
-}
-
-.accent-line {
-  position: absolute;
-  bottom: -10px;
-  left: -20px;
-  opacity: 0.2;
-  width: 300px;
-  pointer-events: none;
-}
-
-.project-card {
-  background: linear-gradient(135deg, #fffaf5 0%, #fdf1e5 100%);
-  border: 1px solid #d3b08a;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(141, 92, 44, 0.15);
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(141, 92, 44, 0.25);
-}
-
-.project-card h3 {
-  color: #6b3e1d;
-}
-
-.project-card p {
-  color: #7a5c42;
-}
-
-.project-card .btn-primary {
-  background-color: #6b3e1d;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: background 0.2s;
-}
-
-.project-card .btn-primary:hover {
-  background-color: #8a5b36;
-}
-
-.project-card .btn-secondary {
-  background-color: transparent;
-  border: 2px solid #8a5b36;
-  color: #8a5b36;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-weight: 600;
-}
-
-.project-card .btn-secondary:hover {
-  background-color: #8a5b36;
-  color: white;
-}
-
-/* Aksen garis wave */
-.project-card::before {
-  content: "";
-  position: absolute;
-  bottom: -40px;
-  right: -60px;
-  width: 300px;
-  height: 300px;
-  background: url("abstract-wave.svg") no-repeat center/contain;
-  opacity: 0.15;
-  pointer-events: none;
-}
-.education-section {
-  position: relative;
+  min-height: 100vh; /* agar tampil layar penuh */
   padding: 100px 0;
-  background: linear-gradient(180deg, #fff8ec 0%, #fef9f0 100%);
+  color: #fff;
   text-align: center;
   overflow: hidden;
+  background: radial-gradient(circle at top center, #2a2a2a, #000);
 }
 
-/* Tambahkan efek gradasi emas lembut di kiri atas dan kanan bawah */
-.education-section::before,
-.education-section::after {
+/* efek cahaya lembut di background */
+.where-section::before {
   content: "";
   position: absolute;
-  width: 500px;
-  height: 500px;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1), transparent 70%);
+  animation: glowMove 10s infinite linear;
+  z-index: 0;
+}
+
+@keyframes glowMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10%, 10%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Judul */
+.section-title {
+  position: relative;
+  z-index: 2;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+}
+
+/* Galeri foto */
+.photo-gallery {
+  display: inline-flex;
+  gap: 20px;
+}
+
+.photo-gallery img {
+  width: 320px;
+  height: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.6);
+}
+
+/* Hilangkan scrollbar di browser tertentu (biar clean) */
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+.where-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 0;
+  text-align: center;
+  background: radial-gradient(circle at top center, #2a2a2a, #000);
+  color: #fff;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+}
+
+.gallery-wrapper {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.photo-gallery img {
+  width: 320px;
+  height: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.6);
+}
+
+/* Tombol panah */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 204, 0, 0.2);
+  color: #fff;
+  font-size: 2rem;
+  border: none;
   border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: rgba(255, 204, 0, 0.5);
+  box-shadow: 0 0 15px #ffcc00;
+}
+
+.arrow.left {
+  left: -20px;
+}
+
+.arrow.right {
+  right: -20px;
+}
+.where-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  background: radial-gradient(circle at top center, #2a2a2a 0%, #000 90%);
+  animation: bgMove 12s ease-in-out infinite alternate;
+}
+
+/* background subtle movement */
+@keyframes bgMove {
+  0% {
+    background-position: 0% 0%;
+    background-color: #1a1a1a;
+  }
+  100% {
+    background-position: 100% 100%;
+    background-color: #000000;
+  }
+}
+
+.section-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #ffdf7e;
+  text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #ffb800, 0 0 20px #ffcc00, 0 0 40px #ffdf7e;
+  }
+  to {
+    text-shadow: 0 0 25px #ffd966, 0 0 50px #ffea80, 0 0 80px #fff2b3;
+  }
+}
+
+.gallery-wrapper {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* efek sparkle */
+.sparkle-container::before,
+.sparkle-container::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
   background: radial-gradient(
     circle,
-    rgba(255, 215, 0, 0.25) 0%,
-    transparent 70%
+    rgba(255, 215, 0, 0.4) 2px,
+    transparent 3px
   );
-  z-index: 0;
-  filter: blur(60px);
+  background-size: 100px 100px;
+  animation: sparkleMove 10s linear infinite;
+  pointer-events: none;
+  opacity: 0.3;
 }
 
-/* Letakkan dengan posisi lebih natural dan besar supaya terlihat penuh */
-.education-section::before {
-  top: -150px;
-  left: -150px;
+@keyframes sparkleMove {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100px, 100px);
+  }
 }
 
-.education-section::after {
-  bottom: -150px;
-  right: -150px;
+.photo-gallery {
+  display: flex;
+  gap: 25px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* Supaya konten tetap muncul di atas background */
-.education-section h2,
-.education-section .education-list {
+.photo-gallery img {
+  width: 300px;
+  height: 210px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(255, 204, 0, 0.7);
+}
+
+/* tombol panah */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 204, 0, 0.2);
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: rgba(255, 204, 0, 0.6);
+  box-shadow: 0 0 20px #ffcc00, 0 0 30px #ffdf80;
+}
+
+.arrow.left {
+  left: -25px;
+}
+
+.arrow.right {
+  right: -25px;
+}
+.where-section {
   position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #2b2b2b 0%, #000 90%);
+  animation: bgShift 12s ease-in-out infinite alternate;
+}
+
+@keyframes bgShift {
+  0% {
+    background-position: 0 0;
+    background-color: #1a1a1a;
+  }
+  100% {
+    background-position: 100% 100%;
+    background-color: #000;
+  }
+}
+
+/* kanvas sparkle */
+#sparkleCanvas {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
   z-index: 1;
 }
 
-/* Judul dan card tetap elegan */
-.education-section h2 {
-  color: #4b2e05;
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 40px;
+.section-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #ffdf7e;
+  text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+  animation: glowText 3s ease-in-out infinite alternate;
+  position: relative;
+  z-index: 2;
 }
 
-.education-list {
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #ffb800, 0 0 20px #ffcc00, 0 0 40px #ffdf7e;
+  }
+  to {
+    text-shadow: 0 0 25px #ffd966, 0 0 50px #ffea80, 0 0 80px #fff2b3;
+  }
+}
+
+.gallery-wrapper {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 30px;
+  justify-content: center;
+  z-index: 2;
 }
 
-.edu-card {
-  width: 70%;
-  background: #fff;
+.photo-gallery {
+  display: flex;
+  gap: 25px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.photo-gallery img {
+  width: 300px;
+  height: 210px;
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(201, 161, 63, 0.2);
-  padding: 25px 40px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(255, 204, 0, 0.7);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 204, 0, 0.2);
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
   transition: all 0.3s ease;
-  border-left: 6px solid #c9a13f;
+  z-index: 3;
 }
 
-.edu-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 35px rgba(201, 161, 63, 0.3);
+.arrow:hover {
+  background: rgba(255, 204, 0, 0.6);
+  box-shadow: 0 0 20px #ffcc00, 0 0 30px #ffdf80;
 }
 
-.edu-card h3 {
-  color: #b9932f;
-  margin-bottom: 8px;
-  font-weight: 700;
+.arrow.left {
+  left: -25px;
+}
+
+.arrow.right {
+  right: -25px;
 }
