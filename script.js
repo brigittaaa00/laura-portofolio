@@ -89,3 +89,13 @@ window.addEventListener("scroll", () => {
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".nav-inner")) navMenu.classList.remove("open");
 });
+
+document.addEventListener("scroll", () => {
+  document.querySelectorAll(".project-card").forEach((card) => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+    }
+  });
+});
